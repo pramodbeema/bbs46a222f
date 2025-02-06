@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Treatment of Buy Back of Shares</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .watermark {
+            position: fixed;
+            top: 21px;
+            left: 21px;
+            color: #dc1a22;
+            font-size: 0.8em;
+            background: rgba(255, 255, 255, 1);
+            padding: 6px 8px;
+            border-radius: 4px;
+            border: 2px solid #dc1a22;
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .watermark:hover {
+            transform: scale(1.05);
+        }
+
+        .title {
+            color: #dc1a22;
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+            margin: 40px 0 20px;
+            padding: 0 20px;
+        }
+
+        .content-container {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .background-image {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.4);
+            opacity: 0.27;
+            z-index: 1;
+        }
+
+        .svg-container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .credit {
+            color: #2a2a2a;
+            font-size: 14px;
+            text-align: center;
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+
+        .feedback-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #dc1a22;
+            color: white;
+            font-size: 12px;
+            padding: 10px 25px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .feedback-button:hover {
+            background-color: #b31419;
+        }
+    </style>
+</head>
+<body>
+    <div class="watermark">Made by Beema's Fincon</div>
+    
+    <div class="content-container">
+        <h1 class="title">Tax treatment of 'Buy back of shares', pursuant to Finance Act 2024</h1>
+        
+        <!-- Background PNG should be placed in the same folder -->
+        <img src="background.png" alt="Background" class="background-image">
+        
+        <!-- SVG container -->
+        <div class="svg-container">
+            <!-- Your SVG file should be placed in the same folder -->
+            <img src="flowchart.svg" alt="Buy Back of Shares Flowchart">
+        </div>
+        
+        <p class="credit">Flowchart logic credit: CA Bhanwar Borana sir</p>
+    </div>
+
+    <button class="feedback-button" onclick="sendFeedback()">
+        <i class="fas fa-comment"></i>
+        Feedback
+    </button>
+
+    <script>
+        function sendFeedback() {
+            window.location.href = 'mailto:bp.beema@outlook.com';
+        }
+
+        document.querySelector('.watermark').addEventListener('click', function() {
+            window.open('https://drive.google.com/file/d/1chfrxZueGzNgTlmy8X94YSDBOIbyk3pK/view?usp=sharing', '_blank');
+        });
+    </script>
+</body>
+</html>
